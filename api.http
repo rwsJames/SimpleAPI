@@ -1,0 +1,54 @@
+### message ok
+GET http://localhost:3000/api
+
+### all actors
+GET http://localhost:3000/api/actors
+
+### one actor by id
+GET http://localhost:3000/api/actors/25
+
+### add one actor
+POST http://localhost:3000/api/actors
+content-type: application/json
+
+{
+    "first_name": "TEST",
+    "last_name": "TESTER"
+}
+
+### update by id
+PUT http://localhost:3000/api/actors/211
+content-type: application/json
+
+{
+    "first_name": "OVER",
+    "last_name": "RIDE"
+}
+
+### update by id another
+PUT http://localhost:3000/api/actors/211
+content-type: application/json
+
+{
+    "first_name": "GOOD",
+    "last_name": "BYE"
+}
+
+### patch first name
+PATCH http://localhost:3000/api/actors/211
+content-type: application/json
+
+{
+    "first_name": "NEWFIRST"
+}
+
+### patch last name
+PATCH http://localhost:3000/api/actors/211
+content-type: application/json
+
+{
+    "last_name": "NEWLAST"
+}
+
+### delete by id
+DELETE http://localhost:3000/api/actors/215
